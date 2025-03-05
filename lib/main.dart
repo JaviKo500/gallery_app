@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:gallery_app/config/router/app_router.dart';
+import 'package:gallery_app/config/config.dart';
 
 void main() {
   runApp(
@@ -19,6 +19,8 @@ class MainApp extends ConsumerWidget {
     final appRouter = ref.watch( goRouterProvider );
     return MaterialApp.router(
       routerConfig: appRouter,
+      theme: AppTheme().getThemeLight(),
+      darkTheme: AppTheme().getThemeDark(),
       debugShowCheckedModeBanner: false,
     );
   }
