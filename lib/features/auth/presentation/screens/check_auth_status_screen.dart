@@ -8,6 +8,8 @@ class CheckAuthStatusScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme;
+    final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       body: Center(
         child: Column(
@@ -29,7 +31,13 @@ class CheckAuthStatusScreen extends StatelessWidget {
             ),
             Text(
               'Hello and Welcome',
-              style: TextStyle()
+              style: textStyle.titleLarge?.copyWith(
+                color: colorScheme.primary,
+                fontSize: Responsive.getValueBySize(
+                context, 
+                ValueBySize<double>(mobileValue: 44, desktopValue: 60)
+              ),
+              )
             ),
             SizedBox(
               height: Responsive.getValueBySize(
@@ -39,7 +47,9 @@ class CheckAuthStatusScreen extends StatelessWidget {
             ),
             Text(
               'We\'re setting things up for you. This will only take a moment.',
-              style: TextStyle()
+              style: textStyle.bodyLarge?.copyWith(
+                color: colorScheme.secondaryFixed,
+              )
             ),
             SizedBox(
               height: Responsive.getValueBySize(
