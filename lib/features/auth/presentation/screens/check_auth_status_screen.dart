@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gallery_app/config/theme/typography_theme.dart';
 import 'package:gallery_app/features/shared/shared.dart';
 
 
@@ -8,8 +9,6 @@ class CheckAuthStatusScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme;
-    final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       body: Center(
         child: Column(
@@ -31,13 +30,7 @@ class CheckAuthStatusScreen extends StatelessWidget {
             ),
             Text(
               'Hello and Welcome',
-              style: textStyle.titleLarge?.copyWith(
-                color: colorScheme.primary,
-                fontSize: Responsive.getValueBySize(
-                context, 
-                ValueBySize<double>(mobileValue: 44, desktopValue: 60)
-              ),
-              )
+              style: TypographyTheme.of(context).titleLarge,
             ),
             SizedBox(
               height: Responsive.getValueBySize(
@@ -47,9 +40,7 @@ class CheckAuthStatusScreen extends StatelessWidget {
             ),
             Text(
               'We\'re setting things up for you. This will only take a moment.',
-              style: textStyle.bodyLarge?.copyWith(
-                color: colorScheme.secondaryFixed,
-              )
+              style: TypographyTheme.of(context).titleSmall,
             ),
             SizedBox(
               height: Responsive.getValueBySize(

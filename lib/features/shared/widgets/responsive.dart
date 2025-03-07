@@ -31,8 +31,8 @@ class Responsive extends StatelessWidget {
   }
 
   static bool isTable(BuildContext context) {
-    return MediaQuery.of(context).size.width < desktopWith 
-      && MediaQuery.of(context).size.width >= mobileWith;
+    return MediaQuery.of(context).size.width >= mobileWith
+      && MediaQuery.of(context).size.width < desktopWith;
   }
 
   static bool isDesktop(BuildContext context) {

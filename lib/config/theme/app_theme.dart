@@ -4,23 +4,6 @@ class AppTheme {
   final bool isDarkMode;
   AppTheme({ this.isDarkMode = false});
 
-  late Color primary;
-  late Color secondary;
-  late Color tertiary;
-  late Color alternate;
-  late Color primaryText;
-  late Color secondaryText;
-  late Color primaryBackground;
-  late Color secondaryBackground;
-  late Color accent1;
-  late Color accent2;
-  late Color accent3;
-  late Color accent4;
-  late Color success;
-  late Color warning;
-  late Color error;
-  late Color info;
-
   ThemeData getTheme() => ThemeData(
     useMaterial3: true,
     appBarTheme: const AppBarTheme(
