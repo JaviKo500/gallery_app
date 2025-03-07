@@ -22,22 +22,12 @@ class CheckAuthStatusScreen extends StatelessWidget {
               placeholder: AssetImage('assets/images/splash_logo_dark.png'), 
               image: AssetImage('assets/images/splash_logo_dark.png'),
             ),
-            SizedBox(
-              height: Responsive.getValueBySize(
-                context, 
-                ValueBySize<double>(mobileValue: 44, desktopValue: 60)
-              ),
-            ),
+            CustomSizeBoxUi(),
             Text(
               'Hello and Welcome',
               style: TypographyTheme.of(context).titleLarge,
             ),
-            SizedBox(
-              height: Responsive.getValueBySize(
-                context, 
-                ValueBySize<double>(mobileValue: 12, desktopValue: 20)
-              ),
-            ),
+            CustomSizeBoxUi(sizeDesktop: 20, sizeMobile: 12, sizeTable: 12),
             Text(
               'We\'re setting things up for you. This will only take a moment.',
               style: TypographyTheme.of(context).titleSmall,
