@@ -41,7 +41,7 @@ class CheckAuthStatusScreen extends StatelessWidget {
                   ValueBySize<double>(mobileValue: 20, desktopValue: 32)
                 ),
               ),
-              CircularProgressIndicator(),
+              CustomLoading(),
             ],
           ),
         ),

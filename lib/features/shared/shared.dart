@@ -1,6 +1,7 @@
 
 // * widgets
 export 'widgets/responsive.dart';
+export 'widgets/custom_loading.dart';
 
 // * ui
 export 'ui/custom_size_box_ui.dart';
