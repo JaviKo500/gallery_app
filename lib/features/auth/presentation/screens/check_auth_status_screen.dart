@@ -25,14 +25,15 @@ class CheckAuthStatusScreen extends StatelessWidget {
                 image: AssetImage('assets/images/logo_app.gif'),
               ),
               CustomSizeBoxUi(),
-              Text(
-                'Hello and Welcome',
-                style: TypographyTheme.of(context).titleLarge,
+              TypingAnimation(
+                text: 'Hello and Welcome',
+                textStyle: TypographyTheme.of(context).titleLarge,
               ),
               CustomSizeBoxUi(sizeDesktop: 20, sizeMobile: 12, sizeTable: 12),
-              Text(
-                'We\'re setting things up for you. This will only take a moment.',
-                style: TypographyTheme.of(context).titleSmall,
+              TypingAnimation(
+                text: 'We\'re setting things up for you. This will only take a moment.',
+                duration: const Duration(milliseconds: 25) ,
+                textStyle: TypographyTheme.of(context).titleSmall,
               ),
               SizedBox(
                 height: Responsive.getValueBySize(
