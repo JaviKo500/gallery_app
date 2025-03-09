@@ -19,12 +19,11 @@ class CheckAuthStatusScreen extends StatelessWidget {
               FadeInImage(
                 width: Responsive.getValueBySize(
                   context, 
-                  ValueBySize<double>(mobileValue: 200, tableValue: 250, desktopValue: 350)
+                  ValueBySize<double>(mobileValue: double.infinity, tableValue: 300, desktopValue: 400)
                 ),
                 placeholder: AssetImage('assets/images/logo_app.gif'), 
                 image: AssetImage('assets/images/logo_app.gif'),
               ),
-              CustomSizeBoxUi(),
               TypingAnimation(
                 text: 'Hello and Welcome',
                 textStyle: TypographyTheme.of(context).titleLarge,
