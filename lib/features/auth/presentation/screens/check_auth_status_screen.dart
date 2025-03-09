@@ -21,8 +21,8 @@ class CheckAuthStatusScreen extends StatelessWidget {
                   context, 
                   ValueBySize<double>(mobileValue: 200, tableValue: 250, desktopValue: 350)
                 ),
-                placeholder: AssetImage('assets/images/splash_logo_dark.png'), 
-                image: AssetImage('assets/images/splash_logo_dark.png'),
+                placeholder: AssetImage('assets/images/logo_app.gif'), 
+                image: AssetImage('assets/images/logo_app.gif'),
               ),
               CustomSizeBoxUi(),
               Text(
