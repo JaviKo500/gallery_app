@@ -7,7 +7,7 @@ import 'package:gallery_app/features/images/images.dart';
 
 final goRouterProvider = Provider( ( ref ) {
   return GoRouter(
-    initialLocation: '/splash',
+    initialLocation: '/login',
     routes: [
       GoRoute(
         path: '/splash',
