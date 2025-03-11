@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
                 
                 Text(
                   'Let\'s Sing you in',
-                  style: TypographyTheme.of(context).typography.headlineLarge,
+                  style: TypographyTheme.of(context).headlineLarge,
                 ),
                 CustomSizeBoxUi(
                   sizeDesktop: 20,
@@ -40,9 +40,46 @@ class LoginScreen extends StatelessWidget {
                   'You\'ve ben missed!',
                   style: TypographyTheme.of(context).typography.titleLarge,
                 ),
+                CustomSizeBoxUi(
+                  sizeMobile: 64,
+                  sizeTable: 64,
+                  sizeDesktop: 72,
+                ),
+                Form(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Email',
+                          style: TypographyTheme.of(context).typography.bodyMedium,
+                        ),
+                        CustomTextFormField(
+                          keyboardType: TextInputType.emailAddress,
+                          hintText: 'Your email',
+                        ),
+                        CustomSizeBoxUi(
+                          sizeMobile: 16,
+                          sizeTable: 20,
+                          sizeDesktop: 24,
+                        ),
+                        Text(
+                          'Password',
+                          style: TypographyTheme.of(context).typography.bodyMedium,
+                        ),
+                        CustomTextFormField(
+                          keyboardType: TextInputType.visiblePassword,
+                          hintText: 'Password',
+                        ),
+                      ],
+                    ),
+                  )
+                ),
                 Expanded(child: Container()),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+
+                  },
                   child: Text(
                     'Login',
                     style: TypographyTheme.of(context).typography.bodyLarge,

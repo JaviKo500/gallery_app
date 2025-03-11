@@ -7,7 +7,13 @@ class CustomSizeBoxUi extends StatelessWidget {
   final double sizeMobile;
   final double sizeTable;
   final double sizeDesktop;
-  const CustomSizeBoxUi ({super.key, this.orientation = Orientation.vertical, this.sizeMobile = 44, this.sizeTable = 60, this.sizeDesktop = 60});
+  const CustomSizeBoxUi ({
+    super.key, 
+    this.orientation = Orientation.vertical, 
+    this.sizeMobile = 44, 
+    this.sizeTable = 60, 
+    this.sizeDesktop = 60
+  });
 
   @override
   Widget build(BuildContext context) {

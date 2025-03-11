@@ -19,7 +19,7 @@ class MainApp extends ConsumerWidget {
     final appRouter = ref.watch( goRouterProvider );
     return MaterialApp.router(
       routerConfig: appRouter,
-      theme: AppTheme(isDarkMode: false ).getTheme(),
+      theme: AppTheme(isDarkMode: true ).getTheme(),
       debugShowCheckedModeBanner: false,
     );
   }

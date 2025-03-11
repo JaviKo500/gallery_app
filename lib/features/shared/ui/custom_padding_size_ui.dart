@@ -3,9 +3,9 @@ import 'package:gallery_app/features/shared/shared.dart';
 
 EdgeInsetsGeometry customPaddingAllSize ( {
     required BuildContext context, 
-    double mobileValue = 16, 
-    double tableValue = 20, 
-    double desktopValue = 24,
+    double mobileValue = 24, 
+    double tableValue = 28, 
+    double desktopValue = 32,
   }) {
   return EdgeInsets.all(
     Responsive.getValueBySize(
