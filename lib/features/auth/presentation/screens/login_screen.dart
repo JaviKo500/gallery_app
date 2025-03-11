@@ -76,15 +76,46 @@ class LoginScreen extends StatelessWidget {
                   )
                 ),
                 Expanded(child: Container()),
-                ElevatedButton(
-                  onPressed: () {
-
-                  },
-                  child: Text(
-                    'Login',
-                    style: TypographyTheme.of(context).typography.bodyLarge,
-                  ),
-                )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      children: [
+                        ElevatedButton(
+                          style: customButtonUi(),
+                          onPressed: () {
+                    
+                          },
+                          child: Text(
+                            'Login',
+                            style: TypographyTheme.of(context).typography.bodyLarge,
+                          ),
+                        ),
+                        CustomSizeBoxUi(
+                          sizeMobile: 16,
+                          sizeTable: 20,
+                          sizeDesktop: 24,
+                        ),
+                        Text.rich(
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'Don\'t have an account? ',
+                                style: TypographyTheme.of(context).typography.bodySmall
+                              ),
+                              TextSpan(
+                                text: 'Register',
+                                style: TypographyTheme.of(context).typography.bodyMedium.copyWith(
+                                  color: Theme.of(context).colorScheme.primary,
+                                ),
+                              ),
+                            ]
+                          )
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
