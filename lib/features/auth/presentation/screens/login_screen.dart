@@ -76,21 +76,12 @@ class LoginScreen extends StatelessWidget {
                   )
                 ),
                 Expanded(child: Container()),
+                CustomButton(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
                       children: [
-                        ElevatedButton(
-                          style: customButtonUi(),
-                          onPressed: () {
-                    
-                          },
-                          child: Text(
-                            'Login',
-                            style: TypographyTheme.of(context).typography.bodyLarge,
-                          ),
-                        ),
                         CustomSizeBoxUi(
                           sizeMobile: 16,
                           sizeTable: 20,
