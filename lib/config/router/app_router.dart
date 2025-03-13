@@ -7,16 +7,20 @@ import 'package:gallery_app/features/images/images.dart';
 
 final goRouterProvider = Provider( ( ref ) {
   return GoRouter(
-    initialLocation: '/login',
+    initialLocation: '/register',
     routes: [
+      //* auth
       GoRoute(
         path: '/splash',
         builder: (context, state) => const CheckAuthStatusScreen(),
       ),
-      //* auth
       GoRoute(
         path: '/login',
         builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: '/register',
+        builder: (context, state) => const RegisterScreen(),
       ),
       //* images
       GoRoute(

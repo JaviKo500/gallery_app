@@ -4,8 +4,15 @@ import 'package:gallery_app/config/config.dart';
 
 
 class CustomButton extends StatelessWidget {
-
-  const CustomButton ({super.key});
+  final String textButton;
+  final Color? backgroundColor;
+  final Color? foregroundColor;
+  const CustomButton ({
+    super.key, 
+    required this.textButton, 
+    this.backgroundColor,
+    this.foregroundColor
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +23,8 @@ class CustomButton extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             elevation: 0,
             minimumSize: const Size(double.infinity, 48),
-            backgroundColor: colorScheme.primary,
-            foregroundColor: colorScheme.onPrimary,
+            backgroundColor: backgroundColor ?? colorScheme.primary,
+            foregroundColor: foregroundColor ?? colorScheme.onPrimary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),
             )
@@ -26,7 +33,7 @@ class CustomButton extends StatelessWidget {
     
           },
           child: Text(
-            'Login',
+            textButton,
             style: TypographyTheme.of(context).typography.bodyLarge.copyWith(
               color: colorScheme.onPrimary,
             ),

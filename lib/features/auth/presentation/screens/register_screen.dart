@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:gallery_app/config/config.dart';
 import 'package:gallery_app/features/shared/shared.dart';
 
-class LoginScreen extends StatelessWidget {
+class RegisterScreen extends StatelessWidget {
 
-  const LoginScreen ({super.key});
+  const RegisterScreen ({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       body: Center(
         child: Padding(
@@ -23,7 +24,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 
                 Text(
-                  'Let\'s Sing you in',
+                  'Create an account',
                   style: TypographyTheme.of(context).headlineLarge,
                 ),
                 CustomSizeBoxUi(
@@ -32,13 +33,9 @@ class LoginScreen extends StatelessWidget {
                   sizeTable: 12,
                 ),
                 Text(
-                  'Welcome back.',
+                  'Sign up now and start your journey!',
                   style: TypographyTheme.of(context).typography.titleLarge.copyWith(
                   ),
-                ),
-                Text(
-                  'You\'ve ben missed!',
-                  style: TypographyTheme.of(context).typography.titleLarge,
                 ),
                 CustomSizeBoxUi(
                   sizeMobile: 64,
@@ -51,12 +48,25 @@ class LoginScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
+                          'Your name',
+                          style: TypographyTheme.of(context).typography.bodyMedium,
+                        ),
+                        CustomTextFormField(
+                          keyboardType: TextInputType.emailAddress,
+                          hintText: 'First last name',
+                        ),
+                        CustomSizeBoxUi(
+                          sizeMobile: 16,
+                          sizeTable: 20,
+                          sizeDesktop: 24,
+                        ),
+                        Text(
                           'Email',
                           style: TypographyTheme.of(context).typography.bodyMedium,
                         ),
                         CustomTextFormField(
                           keyboardType: TextInputType.emailAddress,
-                          hintText: 'Your email',
+                          hintText: 'your@email.com',
                         ),
                         CustomSizeBoxUi(
                           sizeMobile: 16,
@@ -77,7 +87,17 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Expanded(child: Container()),
                 CustomButton(
+                  textButton: 'Register',
+                ),
+                CustomSizeBoxUi(
+                  sizeMobile: 16,
+                  sizeTable: 20,
+                  sizeDesktop: 24,
+                ),
+                CustomButton(
                   textButton: 'Login',
+                  backgroundColor: colorScheme.primaryFixedDim,
+                  foregroundColor: colorScheme.onPrimaryContainer,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -89,21 +109,18 @@ class LoginScreen extends StatelessWidget {
                           sizeTable: 20,
                           sizeDesktop: 24,
                         ),
-                        Text.rich(
-                          TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'Don\'t have an account? ',
-                                style: TypographyTheme.of(context).typography.bodySmall
-                              ),
-                              TextSpan(
-                                text: 'Register',
-                                style: TypographyTheme.of(context).typography.bodyMedium.copyWith(
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
-                              ),
-                            ]
-                          )
+                        Row(
+                          spacing: 4,
+                          children: [
+                            Icon(
+                              Icons.email_rounded,
+                              color: colorScheme.inversePrimary,
+                            ),
+                            Text(
+                              'help@galleryapp.com',
+                              style: TypographyTheme.of(context).typography.bodySmall,
+                            ),
+                          ],
                         ),
                       ],
                     ),
