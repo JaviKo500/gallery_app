@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gallery_app/features/home/presentation/screens/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:gallery_app/features/users/users.dart';
@@ -7,7 +8,7 @@ import 'package:gallery_app/features/images/images.dart';
 
 final goRouterProvider = Provider( ( ref ) {
   return GoRouter(
-    initialLocation: '/register',
+    initialLocation: '/',
     routes: [
       //* auth
       GoRoute(
@@ -26,6 +27,11 @@ final goRouterProvider = Provider( ( ref ) {
       GoRoute(
         path: '/images',
         builder: (context, state) => const ImagesScreen(),
+      ),
+      //* home
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const HomeScreen(),
       ),
       //* users
       GoRoute(
