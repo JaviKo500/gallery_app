@@ -21,7 +21,6 @@ class HomeScreen extends StatelessWidget {
         index: page,
         children: viewRoutes,
       ),
-      backgroundColor: Colors.greenAccent,
       bottomNavigationBar: Responsive.isDesktop(context)
       ? null
       : CustomBottomNavigator(
