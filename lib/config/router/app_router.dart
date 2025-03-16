@@ -8,7 +8,7 @@ import 'package:gallery_app/features/images/images.dart';
 
 final goRouterProvider = Provider( ( ref ) {
   return GoRouter(
-    initialLocation: '/',
+    initialLocation: '/home/0',
     routes: [
       //* auth
       GoRoute(
@@ -30,8 +30,15 @@ final goRouterProvider = Provider( ( ref ) {
       ),
       //* home
       GoRoute(
-        path: '/',
-        builder: (context, state) => const HomeScreen(),
+        path: '/home/:page',
+        name: HomeScreen.name,
+        builder: (context, state) {
+          int page = int.parse(  state.pathParameters['page'] ?? '0' );
+          if ( page > 1  || page < 0 ) {
+            page = 0;
+          }
+          return HomeScreen(page: page);
+        },
       ),
       //* users
       GoRoute(
