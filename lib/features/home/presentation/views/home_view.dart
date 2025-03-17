@@ -66,12 +66,12 @@ class _GalleryLists extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(12),
                 width: Responsive.getValueBySize(context, ValueBySize(
-                  mobileValue: 44, 
-                  desktopValue: 70)
+                  mobileValue: 44.0, 
+                  desktopValue: 70.0)
                 ),
                 height: Responsive.getValueBySize(context, ValueBySize(
-                  mobileValue: 44, 
-                  desktopValue: 70)
+                  mobileValue: 44.0, 
+                  desktopValue: 70.0)
                 ),
                 decoration: BoxDecoration(
                   color: colorsScheme.primary,
