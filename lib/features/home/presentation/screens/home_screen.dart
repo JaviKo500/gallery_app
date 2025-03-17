@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gallery_app/features/home/home.dart';
-import 'package:gallery_app/features/images/presentation/views/images_view.dart';
+import 'package:gallery_app/features/images/images.dart';
 import 'package:gallery_app/features/shared/shared.dart';
 
 
@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
 
   final viewRoutes = [
     HomeView(),
-    ImagesView(),
+    AddImagesView(),
   ];
 
   @override

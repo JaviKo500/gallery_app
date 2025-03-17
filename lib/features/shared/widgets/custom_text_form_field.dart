@@ -6,10 +6,14 @@ class CustomTextFormField extends StatelessWidget {
 
   final TextInputType? keyboardType;
   final String? hintText;
+  final double radius;
+  final Widget? icon;
   const CustomTextFormField ({
     super.key,
     this.keyboardType = TextInputType.text,
-    this.hintText = 'Type your text'
+    this.hintText = 'Type your text',
+    this.radius = 12,
+    this.icon,
   });
 
   @override
@@ -21,18 +25,23 @@ class CustomTextFormField extends StatelessWidget {
         keyboardType: keyboardType,
         decoration: InputDecoration(
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          hintText: hintText,
-          hintStyle: TypographyTheme.of(context).bodySmall,
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(radius),
             borderSide: BorderSide(
               color: colorScheme.inversePrimary,
               width: 2,
             ),
           ),
-          focusColor: colorScheme.primary
+          hintText: hintText,
+          hintStyle: TypographyTheme.of(context).bodySmall,
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radius),
+            borderSide: BorderSide(
+              color: colorScheme.inversePrimary,
+              width: 2,
+            ),
+          ),
+          focusColor: colorScheme.primary,
+          prefixIcon: icon,
         ),
       ),
     );

@@ -25,7 +25,7 @@ final goRouterProvider = Provider( ( ref ) {
       ),
       //* images
       GoRoute(
-        path: '/images',
+        path: '/images/:id',
         builder: (context, state) => const ImagesScreen(),
       ),
       //* home
