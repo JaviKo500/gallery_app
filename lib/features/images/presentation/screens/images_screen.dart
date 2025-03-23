@@ -28,25 +28,28 @@ class ImagesScreen extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: Padding(
-          padding: customPaddingAllSize(context: context),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Form(
-                child: CustomTextFormField(
-                  hintText: 'Search your images',
-                  radius: 232,
-                  icon: Icon(
-                    Icons.search_rounded,
-                    color: colorScheme.inversePrimary,
-                    size: 24,
-                  ),
-                )
-              ),
-              _MenuFilter(),
-              Expanded(
-                child: GridView.builder(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: customPaddingAllSize(context: context),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Form(
+                  child: CustomTextFormField(
+                    hintText: 'Search your images',
+                    radius: 232,
+                    icon: Icon(
+                      Icons.search_rounded,
+                      color: colorScheme.inversePrimary,
+                      size: 24,
+                    ),
+                  )
+                ),
+                _MenuFilter(),
+                GridView.builder(
+                  physics: ScrollPhysics(),
+                  primary: false,
+                  shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: Responsive.getValueBySize(context, ValueBySize(
                     mobileValue: 3,
@@ -69,9 +72,9 @@ class ImagesScreen extends StatelessWidget {
                     ),
                   );
                 },
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
